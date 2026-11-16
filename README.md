@@ -51,3 +51,6 @@ Le workflow GitHub Actions `.github/workflows/ci.yml` lance `npm ci` et `npm tes
 5. Déployez le service. Render fournit la variable `PORT`; aucune clé ni aucun secret n’est requis par TaskFlow.
 
 Pour vérifier le déploiement, ouvrez `https://<votre-service>.onrender.com/health` et contrôlez que la réponse indique `status: "ok"`.
+
+## D�ploiement continu
+Application d�ploy�e automatiquement avec Vercel depuis GitHub.
