@@ -43,3 +43,7 @@
 
 « À travers ce projet, j'ai mis en pratique le Cloud Computing et le DevOps. J'ai utilisé GitHub pour gérer le code, Vercel pour déployer l'application et GitHub Actions pour automatiser les tests. J'ai ainsi réalisé un processus de déploiement continu, avec une application accessible en ligne. »
 
+##Tester CI/CD
+git add .
+git commit -m "Update welcome message"
+git push origin main
