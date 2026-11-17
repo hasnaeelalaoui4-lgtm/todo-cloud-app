@@ -1,56 +1,45 @@
-# TaskFlow
 
-TaskFlow est une application Web de gestion de tâches, conçue avec HTML, CSS, JavaScript, Node.js et Express. Les tâches sont sauvegardées dans le `localStorage` du navigateur : elles sont conservées sur cet appareil et dans ce navigateur après actualisation.
+## **Démonstration du projet TaskFlow**
 
-## Prérequis
+**1. Présenter le projet**
 
-- Node.js 18 ou ultérieur
-- npm
+À AFFICHER : le projet TaskFlow
 
-## Installation et lancement
 
-```bash
-npm ci
-npm start
-```
+« J'ai réalisé un projet web appelé TaskFlow, un gestionnaire de tâches. Mon objectif était de déployer cette application sur le Cloud en utilisant Vercel et GitHub. »
 
-Ouvrez ensuite <http://localhost:3000>. Le serveur utilise le port fourni par `PORT` lorsqu’il est défini, et le port `3000` sinon.
+**2. Montrer le dépôt GitHub**
 
-## Fonctionnalités
+À AFFICHER : ton dépôt GitHub et les fichiers du projet
 
-- Créer, modifier, supprimer et terminer une tâche.
-- Définir un titre, une description, une priorité et une date limite.
-- Filtrer les tâches par état et les rechercher par titre ou description.
-- Consulter les statistiques et la progression.
-- Sauvegarder automatiquement les tâches dans le navigateur.
 
-## Vérification
 
-Exécutez les tests automatisés avec :
+« Le code source de mon application est hébergé sur GitHub. Cela permet de sauvegarder et de gérer les modifications du projet. »
 
-```bash
-npm test
-```
+**3. Montrer le déploiement sur Vercel**
 
-L’endpoint de santé est disponible à <http://localhost:3000/health> et renvoie :
+À AFFICHER : Vercel → Project → Deployments
 
-```json
-{"status":"ok","version":"1.0.0"}
-```
 
-## Intégration continue
 
-Le workflow GitHub Actions `.github/workflows/ci.yml` lance `npm ci` et `npm test` à chaque push et à chaque pull request.
+« J'ai connecté mon dépôt GitHub à Vercel pour héberger mon application sur Internet. Le déploiement se fait automatiquement à partir du code. »
 
-## Déploiement sur Render
+**4. Montrer l'application en ligne**
 
-1. Publiez le projet dans un dépôt GitHub.
-2. Dans Render, créez un **Web Service** connecté à ce dépôt.
-3. Sélectionnez **Node** comme environnement.
-4. Configurez la commande de build `npm ci` et la commande de démarrage `npm start`.
-5. Déployez le service. Render fournit la variable `PORT`; aucune clé ni aucun secret n’est requis par TaskFlow.
+À AFFICHER : ouvrir le lien public de TaskFlow
 
-Pour vérifier le déploiement, ouvrez `https://<votre-service>.onrender.com/health` et contrôlez que la réponse indique `status: "ok"`.
 
-## D�ploiement continu
-Application d�ploy�e automatiquement avec Vercel depuis GitHub.
+
+« Voici le résultat final : mon application est accessible en ligne grâce au Cloud, sans avoir besoin de l'exécuter uniquement sur mon ordinateur. »
+
+**5. Montrer les tests automatiques**
+
+À AFFICHER : GitHub → Actions → TaskFlow CI
+
+
+« J'ai ajouté GitHub Actions pour automatiser les tests. À chaque modification envoyée sur GitHub, les tests sont exécutés automatiquement pour vérifier que l'application fonctionne correctement. »
+
+## **Conclusion à dire devant le professeur**
+
+« À travers ce projet, j'ai mis en pratique le Cloud Computing et le DevOps. J'ai utilisé GitHub pour gérer le code, Vercel pour déployer l'application et GitHub Actions pour automatiser les tests. J'ai ainsi réalisé un processus de déploiement continu, avec une application accessible en ligne. »
+

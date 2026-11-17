@@ -13,15 +13,53 @@
     search: document.querySelector("#task-search"),
     toast: document.querySelector("#toast"),
   };
+  let shouldSaveStarterTasks = false;
   let tasks = loadTasks();
   let activeFilter = "all";
   let editingId = null;
   let toastTimer;
+  if (shouldSaveStarterTasks) saveTasks();
+
+  function createStarterTasks() {
+    const createdAt = new Date().toISOString();
+    return [
+      {
+        id: window.crypto.randomUUID(),
+        title: "Planifier ma semaine",
+        description: "Noter les priorités et les rendez-vous importants.",
+        priority: "high",
+        dueDate: "",
+        completed: false,
+        createdAt,
+      },
+      {
+        id: window.crypto.randomUUID(),
+        title: "Répondre aux e-mails importants",
+        description: "Traiter les messages qui nécessitent une réponse.",
+        priority: "medium",
+        dueDate: "",
+        completed: false,
+        createdAt,
+      },
+      {
+        id: window.crypto.randomUUID(),
+        title: "Ranger mon espace de travail",
+        description: "Faire un peu de place pour mieux se concentrer.",
+        priority: "low",
+        dueDate: "",
+        completed: false,
+        createdAt,
+      },
+    ];
+  }
 
   function loadTasks() {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
-      if (!saved) return [];
+      if (!saved) {
+        shouldSaveStarterTasks = true;
+        return createStarterTasks();
+      }
       const parsed = JSON.parse(saved);
       if (!Array.isArray(parsed)) throw new Error("Les données enregistrées ne sont pas une liste.");
       return parsed.filter((task) =>
